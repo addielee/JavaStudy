@@ -1,1 +1,1 @@
-# WebStudy
+# JavaStudy
