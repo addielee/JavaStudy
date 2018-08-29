@@ -1,6 +1,19 @@
 import java.util.Scanner;
 
 class Example02{
+	/*
+	연산기호에 따라 연산의 결과를 출력한다.(연산기호 keyboard 입력받는다)
+	- 연산 기호(+,-,*,/,%)
+	- 임의의 두 개의 난수를 정수형에 저장한다.
+	  (난수의 범위는 1~50 사이)
+	만약, +라면 발생한 두 개의 난수를 더한 결과를 출력한다.
+	  ex) 5+3=8 출력
+	-라면 두 개의 난수를 뺀다
+	  ex) 5-3=2 출력
+	만약 연산기호가 +,-,*,/,%중의 하나가 아니라면
+	  "연산기호가 잘못되었습니다." 출력
+	*/
+	
 	public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
 	
