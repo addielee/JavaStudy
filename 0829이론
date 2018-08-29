@@ -1,0 +1,67 @@
+*조건 삼항 연산자
+조건식 ? 조건식 결과 참일 경우 : 조건식 결과 거짓일 경우
+ex) long seed=0;
+    Random r = (seed==0)?new Random(): new Random(seed);
+
+*연결 연산자
+숫자+문자열(String): 붙이기, but char type과는 연산이 되고 int에 담김
+
+*논리연산자
+true | ?? : true -> 답 나왔어도 ??까지 다 메소드 실행
+true || ?? : true -> 주기가 짧은 연산자(여기서 ??는 실행 안함)
+
+false & ?? -> false (??까지 실행)
+false && ?? -> false (??까지 실행 안하고 답 나옴)
+
+*증감연산자
+a++ : 선 대입 후 증가
+++a : 선 증가 후 대입
+
+ex) int a=1, b=1;
+	a=b++;
+	System.out.println(a);->1
+	System.out.println(b);->2
+
+a++ 와 a+=1와 a=a+1은 모두 같음
+
+*형변환
+1)promotion :자동으로 형변환, 작은 type이 큰 type에 담김, boolean과 String과 같은 객체는 형변환 불가능(객체 형변환은 상속 관계일 때만 가능)
+2)casting : 강제 형변환, 
+	byte끼리 더한다 해도 오류!!!!(+와 같은 연산자는 반드시 4바이트 이상의 크기가 있어야 연산 결과를 담을 수 있음!!
+                              그래서 byte나 short로 연산 잘 안 함)
+	
+____________________________________________________________________________________________________________________
+*제어문
+1)조건문 : if,switch
+2)반목문 : for,while,do_while문 ->반복문 제어 : break, continue
+
+*If문 구조
+
+if(조건식:결과는 boolean형){
+	1)실행문장;
+}else if(조건식){
+	2)실행문장;
+}else if(조건식){
+	3)실행문장;
+}else{
+}
+
+
+*난수 발생 : 임의의 수
+	double nansu = Math.random();//0.0~~0.999999
+	nansu*경우의 수 +최소값 ; ex) nansu*5+1;
+
+	ex)0~10
+	nansu*11+9; 
+
+
+
+*switch문 구조
+
+switch(표현식){  //표현식에는 byte,short,int,char만 허용  *1.8 version 되면서 String 허용
+	case 값: 문장; break;      *값은 크기 비교 불가능
+	case 값: 문장; break;
+	case 값: 문장; break;
+	default: 문장;
+
+}
