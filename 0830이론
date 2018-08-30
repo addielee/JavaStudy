@@ -1,0 +1,84 @@
+*반복문
+
+for(초기화;조건식;증감식){
+	실행문장;
+}
+
+*실행순서
+초기화 -> 조건식 :true -> 실행문장 -> 증감식 (-> 다시 조건식으로)
+		 :false -> 빠져나옴
+
+
+
+*이중 for문
+for(초기화;조건식;증감식){
+	for(초기화;조건식;증감식){     ->작은 for문 빠져나오면 큰 for문 증감식으로 감. 그 다음  큰 for문 조건식으로 감
+		문장;
+	}			       ->큰 for문 갔다가 다시 작은 for문으로 들어오면 다시 초기화
+}
+
+
+
+큰 for문은 행, 작은 for문은 열
+줄을 바꾸려면 작은 for문 빠져나온 곳에 system.out.println();
+
+
+
+
+
+*while문 : 조건식이 false이면 들어가지 않고 바로 빠져나옴. 조건식에 그냥 true라 쓰고 무한루프로 많이 사용.
+
+초기화;
+while(조건식){
+	증감식;
+	실행문장;
+}
+
+
+
+-> 이중 while
+
+while(){
+    작은 while의 초기화;
+    while(){
+	증감식;
+	실행문장;
+    }
+    증감식;
+}
+
+*do-while문 : 무조건 증감식,실행문장은 한 번 수행. 조건식이 true이면 다시 들어가고 false이면 그 상태로 끝.
+
+초기화;
+do{	
+	증감식;
+	실행문장;
+}while(조건식);
+
+
+
+
+
+*반복문 제어
+-break : break를 만나면 이하 문장 실행 안하고 반복문 빠져 나옴
+	ex) for(a=1;a<5;a++){
+		if(a==3) break;
+		System.out.print(a)
+	}
+	->출력 : 1,2
+
+-continue : continue를 만나면 이하 문장 실행 안하지만 다시 반복문을 실행
+	ex) for(a=1;a<5;a++){
+		if(a==3) continue;
+		System.out.print(a)
+	}
+	->출력 : 1,2,4
+
+-label : break나 continue 사용시 특정위치로 가도록 이름 지정 but 사용 지양
+	ex) 
+	outer :
+	for(a=1;a<5;a++){
+		if(a==3) break outer;
+		System.out.print(a)
+	}
+	->지정된 위치로 감
