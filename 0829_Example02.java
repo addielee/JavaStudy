@@ -14,7 +14,7 @@ class Example02{
 	  "연산기호가 잘못되었습니다." 출력
 	*/
 	
-	public static void main(String [] args){
+   public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
 	
 	int x = (int)(Math.random()*50)+1;
@@ -31,5 +31,19 @@ class Example02{
 		case "%" : System.out.println(x+"%"+y+"="+(x%y)); break;
 		default : System.out.println("연산기호가 잘못되었습니다.");
 		}
-	}
-}
+	 /**
+	if(operation.equals("+")){
+		System.out.println(x+"+"+y+"="+(x+y));
+	}else if(operation.equals("-")){
+		System.out.println(x+"-"+y+"="+(x-y));
+	}else if(operation.equals("*")){
+		System.out.println(x+"*"+y+"="+(x*y));
+	}else if(operation.equals("/")){
+		System.out.println(x+"/"+y+"="+((double)x/y));
+	}else if(operation.equals("%")){
+		System.out.println(x+"%"+y+"="+(x%y));
+	}else{
+		System.out.println("연산기호가 잘못되었습니다.");
+	}*/
+    }
+} 
