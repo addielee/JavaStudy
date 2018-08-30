@@ -27,7 +27,7 @@ class Example02{
 		case "+" : System.out.println(x+"+"+y+"="+(x+y)); break;
 		case "-" : System.out.println(x+"-"+y+"="+(x-y)); break;
 		case "*" : System.out.println(x+"*"+y+"="+(x*y)); break;
-		case "/" : System.out.println(x+"/"+y+"="+(double)(x/y)); break;  //소수점??
+		case "/" : System.out.println(x+"/"+y+"="+((double)x/y)); break;  //연산하고 난 후는 의미 없음. 둘 중 하나를 double로 바꾸자!
 		case "%" : System.out.println(x+"%"+y+"="+(x%y)); break;
 		default : System.out.println("연산기호가 잘못되었습니다.");
 		}
